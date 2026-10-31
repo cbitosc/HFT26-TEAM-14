@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15, 23, 42;
+  --background-rgb: 248, 250, 252;
+}
+
+html { scroll-behavior: smooth; }
+body { color: rgb(var(--foreground-rgb)); background: rgb(var(--background-rgb)); font-family: Arial, Helvetica, sans-serif; }
+* { box-sizing: border-box; }
+::selection { background: rgba(30, 122, 247, 0.2); }
+
+.resume-heading {
+  border-bottom: 1px solid #cbd5e1;
+  padding-bottom: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #334155;
+}
+
+@media print {
+  @page { margin: 14mm; }
+  body { background: white !important; }
+  body * { visibility: hidden; }
+  .resume-paper, .resume-paper * { visibility: visible; }
+  .resume-paper { position: absolute; inset: 0; width: 100%; max-width: none; min-height: 0; margin: 0; padding: 0; box-shadow: none; }
+}
